@@ -1,8 +1,5 @@
-
 def problem1(n)
-  multiples = Array.new
-  1.upto(n-1) {|i| multiples << i if (i%3).zero? || (i%5).zero?} 
-  multiples.inject(0) {|sum,m| sum+=m}
+  (1..(n-1)).select {|i| (i%3).zero? || (i%5).zero?}.inject(0) {|sum,j|sum+=j}
 end
 
 puts "Answer = #{problem1(1000)}"
