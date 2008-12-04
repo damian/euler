@@ -1,32 +1,21 @@
-def pow(x,y)
-x**y
+def squared(x)
+  x**2
 end
 
 def sumOfSquares(n)
-total=0
-  for i in 1...n+1
-    total+=pow(i,2)
-  end
-  total
+  (1..n).to_a.inject(0) {|sum,i| sum += squared(i)}
 end
 
 def squareOfSum(n)
-  total=0
-  for i in 1...n+1
-    total+=i
-  end
-  total=pow(total,2)
-end
-
-def difference(a,b)
-  b-a
+  squared((1..n).to_a.inject(0) {|sum, i| sum += i})
 end
 
 def problem6(n)
-  difference(sumOfSquares(n), squareOfSum(n))
+  squareOfSum(n) - sumOfSquares(n)
 end
 
 puts "Answer = #{problem6(100)}"
-    
+
+
   
     
