@@ -1,1 +1,8 @@
-Mt Project Euler solutions in Ruby
+My Project Euler solutions in Ruby
+
+Need to
+
+* Improve efficiency of #14 ~1min40
+* Improve efficiency of #24 ~53secs
+* Find my solution to #21
+
